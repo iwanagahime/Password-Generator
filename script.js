@@ -93,6 +93,11 @@ console.log(uppercaseArray);
 console.log(numberArray);
 console.log(specialCharactersArray);
 
+let isLowercase;
+let isUppercase;
+let isNumber;
+let isSpecialCharacter;
+
 const generatePassword = function (
   passwordLength = prompt("What is your password length?")
 ) {
