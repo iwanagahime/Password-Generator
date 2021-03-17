@@ -98,10 +98,14 @@ let isUppercase;
 let isNumber;
 let isSpecialCharacter;
 
+const optionsArray = [];
+
 const generatePassword = function (
   passwordLength = prompt("What is your password length?")
 ) {
   console.log(passwordLength);
+  // If password length is greater than or equal to 8 and password length is lesser than or equal to 128
+  // Prompt returns a string value eg. 8 is actually "8"
   // check if the number entered by the user is an actual number or string
   // Before if  cenvert string to number Number.parseInt() and store in new variable
   passwordLength > 8 && passwordLength < 128;
@@ -124,51 +128,45 @@ const generatePassword = function (
   if (!isLowercase && !isUppercase && !isNumber && !isSpecialCharacter) {
     alert("At least one type of character should be selected");
   }
-  return password;
+
+  if (isLowercase) {
+    optionsArray.push(lowercaseArray);
+  }
+  if (isUppercase) {
+    optionsArray.push(uppercaseArray);
+  }
+  if (isNumber) {
+    optionsArray.push(numberArray);
+  }
+  if (isSpecialCharacter) {
+    optionsArray.push(specialCharactersArray);
+  }
+
+  // choose random array and a random character from that chosen array
+  let randomArray =
+    chosenCharacterArray[Math.random() * chosenCharacterArray.length];
+  let randomCharacter =
+    randomArray[Math.floor(Math.floor(Math.random * randomArray.length))];
+
+  console.log(randomArray);
+  console.log(randomCharacter);
+
+  // for loop to generate characters for password
+
+  for (let i = 0; i < passwordLengthNumber; i++)
+    passwordArray.push(randomCharacter);
+  console.log(passwordArray);
+
+  console.log(passwordArray.join(""));
+
+  // Write password to the #password input
+  function writePassword() {
+    var password = generatePassword();
+    var passwordText = document.querySelector("#password");
+
+    passwordText.value = password;
+  }
+
+  // Add event listener to generate button
+  generateBtn.addEventListener("click", writePassword);
 };
-
-// If password length is greater than or equal to 8 and password length is lesser than or equal to 128
-// Prompt returns a string value eg. 8 is actually "8"
-
-// If true then ask for all 4 requirements using confirm and store each in a variable
-
-// if(condition){
-//   const isLowercase = confirm ("Do you want lowercase?");
-//   const isUppercase = confirm ("Do you want uppercase?");
-//   const isNumber = confirm ("Do you want number?");
-//   const isSpecialCharacter = confirm ("Do you want special character");
-// }
-
-// Start to generate password
-// const optionsArray =[
-//   ['a', 'b', 'c', 'd'],
-//   ['A', 'B', 'C', 'D']
-// ]
-
-// if(isLowercase){
-//   optionsArray.push(lowercaseArray)}
-// }
-// else if (isUppercase){
-//   optionsArray.push(uppercaseArray)
-// }
-// else if (isNumber){
-//   optionsArray.push(numberArray)
-// }
-// else {optionsArray.push(specialCharactersArray)
-// }
-
-// Get random index for options array (0,1)
-// Get the array from options array optionsArray[random index]
-// From that array get another random number between 0 and the length of that array
-// Get the random character from that array
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-}
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
