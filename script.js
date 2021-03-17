@@ -88,6 +88,11 @@ const specialCharactersArray = [
   ":",
 ];
 
+console.log(lowercaseArray);
+console.log(uppercaseArray);
+console.log(numberArray);
+console.log(specialCharactersArray);
+
 //
 
 const generatePassword = function () {
