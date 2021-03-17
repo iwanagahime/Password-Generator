@@ -105,6 +105,25 @@ const generatePassword = function (
   // check if the number entered by the user is an actual number or string
   // Before if  cenvert string to number Number.parseInt() and store in new variable
   passwordLength > 8 && passwordLength < 128;
+
+  isLowercase = confirm(
+    "Do you want your password to contain lowercase characters?"
+  );
+  isUppercase = confirm(
+    "Do you want your password to contain uppercase characters?"
+  );
+  isNumber = confirm("Do you want your password to contain numbers?");
+  isSpecialCharacter = confirm(
+    "Do you want your password to contain special characters?"
+  );
+  console.log(isLowercase);
+  console.log(isUppercase);
+  console.log(isNumber);
+  console.log(isSpecialCharacter);
+
+  if (!isLowercase && !isUppercase && !isNumber && !isSpecialCharacter) {
+    alert("At least one type of character should be selected");
+  }
   return password;
 };
 
