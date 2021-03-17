@@ -100,6 +100,7 @@ let isSpecialCharacter;
 
 const optionsArray = [];
 
+// Declaring function for generating password
 const generatePassword = function (
   passwordLength = prompt("What is your password length?")
 ) {
@@ -107,7 +108,7 @@ const generatePassword = function (
   // If password length is greater than or equal to 8 and password length is lesser than or equal to 128
   // Prompt returns a string value eg. 8 is actually "8"
   // check if the number entered by the user is an actual number or string
-  // Before if  cenvert string to number Number.parseInt() and store in new variable
+  // Before if  convert string to number Number.parseInt() and store in new variable
   passwordLength > 8 && passwordLength < 128;
 
   isLowercase = confirm(
