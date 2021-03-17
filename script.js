@@ -94,10 +94,18 @@ console.log(numberArray);
 console.log(specialCharactersArray);
 
 const generatePassword = function (
-  passwordLength = prompt("What is the length of your password?")
-) // If password length is greater than or equal to 8 and password length is lesser than or equal to 128
+  passwordLength = prompt("What is your password length?")
+) {
+  console.log(passwordLength);
+  // check if the number entered by the user is an actual number or string
+  // Before if  cenvert string to number Number.parseInt() and store in new variable
+  passwordLength > 8 && passwordLength < 128;
+  return password;
+};
+
+// If password length is greater than or equal to 8 and password length is lesser than or equal to 128
 // Prompt returns a string value eg. 8 is actually "8"
-// Before if  cenvert string to number Number.parseInt() and store in new variable
+
 // If true then ask for all 4 requirements using confirm and store each in a variable
 
 // if(condition){
@@ -130,7 +138,6 @@ const generatePassword = function (
 // From that array get another random number between 0 and the length of that array
 // Get the random character from that array
 
-{};
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
