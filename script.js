@@ -98,7 +98,8 @@ let isUppercase;
 let isNumber;
 let isSpecialCharacter;
 
-const optionsArray = [];
+// Declaring an empty array for user's chosen options
+const chosenOptionsArray = [];
 
 // Declaring function for generating password
 const generatePassword = function (
@@ -121,6 +122,7 @@ const generatePassword = function (
   isSpecialCharacter = confirm(
     "Do you want your password to contain special characters?"
   );
+
   console.log(isLowercase);
   console.log(isUppercase);
   console.log(isNumber);
