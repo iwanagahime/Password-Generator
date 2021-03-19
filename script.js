@@ -99,13 +99,13 @@ const chosenOptionsArray = [];
 // Declaring function for generating password
 function generatePassword() {
   const passwordArray = [];
-  // prompting user for password length
+  // Prompting user for password length
   const passwordLength = prompt("What is your password length?");
 
-  // converting string to a number
+  // Converting string to a number
   const passwordLengthNumber = parseInt(passwordLength, 10);
 
-  // asking user to provide character choices
+  // Asking user to provide character choices
   if (passwordLengthNumber > 8 && passwordLengthNumber < 128) {
     isLowercase = confirm(
       "Do you want your password to contain lowercase characters?"
