@@ -32,18 +32,21 @@ code .
 
 ## Screenshots
 
-###
+### Prompt
 
-![Deployed application  prompt]()
+![Deployed application  prompt](assets/images/screenshots/screenshot-1.PNG)
 
-###
+### Confirm
 
-![Deployed application confirm]()
+![Deployed application confirm](assets/images/screenshots/screenshot-2.PNG)
 
-###
+### Alert
 
-![Deployed application alert]()
+![Deployed application alert](assets/images/screenshots/screenshot-4.PNG)
 
-###
+![Deployed application alert](assets/images/screenshots/screenshot-5.PNG)
 
-![Deployed application generated password]()
+### Generated password
+
+![Deployed application generated password](assets/images/screenshots/screenshot-3.PNG)
+![Deployed application generated password](assets/images/screenshots/screemshot-6.PNG)
