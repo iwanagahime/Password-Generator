@@ -10,12 +10,16 @@ We were asked to modify starter code to create an application that enables emplo
 
 ## What did we do?
 
-- Declare
--
--
--
--
--
+- Declared variables for character choices in global memory
+- Declared generatePassword function that was constructed as a series of steps including:
+- Prompting user for password length
+- Using confirm to let user specify their choices
+- Using alert to make sure that user sets the correct password length and chooses at least one character type
+- Declaring a new array for user's choices
+- Using a for loop to generate characters for our password
+- Using Math.floor function to generate random character from random array to form our password
+- Converting the randomly generated characters from an array into a string
+- Returning the generated password to the user in browser
 - Format code using prettier
 
 ## Getting started
